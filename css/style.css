@@ -1,0 +1,260 @@
+body {
+    background-image: url(../images/backgr.jpg);
+    background-attachment: fixed;
+    /*background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
+.logo {
+    max-width: 120px;
+    margin-top: -10px;
+}
+
+.welcome {
+    color: #337ab7;
+    font-size: 120%;
+}
+
+.leftpanel {
+    margin-left: -20px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.remove-note {
+    margin-top: -3px;
+}
+
+.reg-for-notes {
+    text-align: center;
+    font-weight: bold;
+    color: #43467A;
+    text-shadow: grey 1px 1px 1px;
+}
+
+.create-note {
+    margin-top: 200px;
+}
+
+.del-note {
+    margin-top: -30px;
+}
+
+.admin-rights {
+    color: green;
+    text-align: center;
+}
+
+.users-add-task-btn {
+    width: 430px !important;
+}
+
+.tasks-upl-p {
+    color: green;
+}
+
+#first-form {
+    margin-top: 10px;
+}
+
+#reg-form {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 150px;
+}
+
+.todo_H {
+    font-weight: bold;
+    color: #43467A;
+    text-align: center;
+    /*margin-left: 80px;*/
+    /*margin-top: -5px;*/
+    margin-bottom: 45px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.tasksfor {
+    font-weight: bold;
+    margin-left: 20px
+}
+
+.period {
+    width: 105px;
+}
+
+.tasks {
+    overflow: auto;
+    width: 100%;
+    height: 450px;
+    background: #b6d2db;
+    text-align: left;
+    font-size: 150%;
+    color: #2F4F4F;
+    border-radius: 15px;
+    border: 2px double grey;
+}
+
+.done {
+    overflow: auto;
+    width: 100%;
+    height: 450px;
+    background: #c6c6d3;
+    text-align: left;
+    font-size: 150%;
+    color: #2F4F4F;
+    border-radius: 15px;
+    border: 2px double #6D6D8D;
+}
+
+.first_p {
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.done-btn,
+.delete-btn {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.atf {
+    margin-top: 5px;
+}
+
+.add-btn {
+    width: 100px;
+}
+
+.form-control input {
+    width: 430px;
+}
+
+.delall-btn {
+    margin-top: 230px;
+}
+
+.btn-list {
+    width: 60px;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.add-task {
+    font-size: 120%;
+    margin-left: 100px;
+}
+
+.about_H {
+    font-weight: bold;
+    color: #43467A;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    margin-bottom: 50px;
+}
+
+.about {
+    font-size: 130%;
+}
+
+.line {
+    border-bottom: none;
+}
+
+.line:hover {
+    text-decoration: none;
+    color: #0088CC;
+    /*border-bottom: 1px solid #0088CC;*/
+}
+
+.notes_H {
+    font-weight: bold;
+    color: #43467A;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    margin-bottom: 50px;
+}
+
+.upload {
+    width: auto;
+    margin-top: 60px;
+    font-weight: bold;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    padding-top: 10px;
+}
+
+.upload p {
+    text-align: center;
+}
+
+table {
+    border-top: 2px solid gray;
+}
+
+.distr td, th {
+    border: 2px solid gray;
+}
+
+.tab_align {
+    text-align: center;
+}
+
+.tab_align select {
+    width: 90%;
+}
+
+.distr .child {
+    width: 150px;
+    text-align: center;
+}
+
+.distr .task {
+    text-align: center;
+}
+
+.distr .child input[type="checkbox"] {
+    display: inline-block;
+    text-align: center;
+}
+
+.distr_tasks {
+    margin-bottom: 20px;
+}
+
+/* Overflow */
+::-webkit-scrollbar-button {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px
+}
+
+::-webkit-scrollbar-track {
+    background-color: #E6E6E6
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background-color: #6dc0c8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #56999f;
+}
+
+::-webkit-resizer {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 0px
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
