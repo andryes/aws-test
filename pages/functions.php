@@ -1,10 +1,6 @@
 <?php
 
 function connect( $host = "127.0.0.1:3306", $user = "todo", $pass = "Abc123", $dbname = "todo" ) {
-	mysql_connect( $host, $user, $pass ); //or die ('Connection error')
-	mysql_select_db( $dbname ); //or die ('db select error')
-	mysql_query( 'set names "utf8"' );
-
 	return new PDO( "mysql:host=$host;dbname=$dbname", $user, $pass, array( PDO::ATTR_PERSISTENT => true ) );
 }
 
@@ -19,18 +15,18 @@ function register( $name, $pass, $role ) {
 		inputLength();
 		return false;
 	}
+	$pdo = connect();
 	$ins = 'INSERT INTO users (login, pass, roleid) VALUES("'.$name.'", "'.md5($pass).'", "'.$role.'")';
-	connect();
-	mysql_query( $ins );
-	$err = mysql_errno();
-	if ( $err ) {
-		if( $err == 1062 ) {
-			echo "<script>window.onload = function() { alert( 'Choose another login' ); window.location=document.URL; }</script>";
-		} else {
-			echo "<script>window.onload = function() { alert( 'Error' ); window.location=document.URL; }</script>";
-		}
-		return false;
-	}
+	$pdo->query( $ins );
+//	$err = mysql_errno();
+//	if ( $err ) {
+//		if( $err == 1062 ) {
+//			echo "<script>window.onload = function() { alert( 'Choose another login' ); window.location=document.URL; }</script>";
+//		} else {
+//			echo "<script>window.onload = function() { alert( 'Error' ); window.location=document.URL; }</script>";
+//		}
+//		return false;
+//	}
 	return true;
 }
 
@@ -45,10 +41,10 @@ function login( $logname, $logpass ) {
 		inputLength();
 		return false;
 	}
-	connect();
+	$pdo = connect();
 	$sel = 'SELECT * FROM users WHERE login ="'.$logname.'" and pass="'.md5( $logpass ).'"';
-	$res = mysql_query( $sel );
-	if ( $row = mysql_fetch_array( $res, MYSQL_NUM ) ) {
+	$sql = $pdo->query( $sel );
+	if ( $row = $sql->fetch( PDO::FETCH_NUM ) ) {
 		$_SESSION['id'] = $row[0];
 		$_SESSION['login'] = $row[1];
 		$_SESSION['pass'] = $row[2];

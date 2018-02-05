@@ -1,4 +1,4 @@
-# aws-test
+# TODO list
 
 Test application includes several pages with registration and authorization forms. Uses Bootstrap 3, PHP, MySQL.
 

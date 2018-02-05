@@ -17,9 +17,10 @@ if ( isset( $_SESSION['role'] ) && $_SESSION['role'] == 1 ) { ?>
 				move_uploaded_file( $_FILES['file']['tmp_name'], "files/" . $_FILES['file']['name'] );
 				$path = realpath( './files/' ) . '/' . $_FILES['file']['name'];
 				$sql  = 'LOAD DATA INFILE \'' . $path . '\' INTO TABLE upl_task(task, datetime) SET datetime = NOW()';
-				$pdo->query( $sql );
-				echo '<h3 class="tasks-upl-p">Tasks uploaded successfully</h3><br>';
-				echo $sql;
+				if ( $pdo->query( $sql ) ) {
+					rename( $path, realpath( './files/' ) . '/tasks_' . date( "m.d.y_H:i:s" ) );
+					echo '<h3 class="tasks-upl-p">Tasks uploaded successfully</h3><br>';
+				}
 			}
 		}
 	} ?>
