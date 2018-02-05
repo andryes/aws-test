@@ -7,7 +7,7 @@ DB settings can be found in function "connect" (pages/functions.php), MySQL dump
 To be continued
 
 
-==================================================================================================================
+============================================================
 
 INSTRUCTIONS
 
@@ -21,4 +21,4 @@ Distributor can specify user that will be responcible for task.
 
 Regular users can check distributed tasks, create their own, and move tasks into the "Done" table.
 
-==================================================================================================================
+============================================================
